@@ -6,7 +6,7 @@
 
 **D**ata · **E**thics · **D**efense · **I**ntegrity · **D**ecision
 
-An AI companion for playing D&D 2024 in Brazilian Portuguese.
+*Nobody should have to read 397 pages before sitting at the table.*
 
 [Português](README.md) · [Rules base](docs/README.md) · [Agent guide](AGENTS.md)
 

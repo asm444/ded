@@ -6,7 +6,7 @@
 
 **D**ados · **É**tica · **D**efesa · **I**ntegridade · **D**ecisão
 
-Um auxílio de IA para jogar D&D 2024 em português.
+*Ninguém precisa ler 397 páginas para sentar à mesa.*
 
 [English](README.en.md) · [Base de regras](docs/README.md) · [Guia para agentes](AGENTS.md)
 
