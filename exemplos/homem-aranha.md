@@ -1,4 +1,4 @@
-# Exemplo — "quero jogar o Homem-Aranha"
+# Exemplo — "quero jogar com o Homem-Aranha"
 
 <table>
 <tr>
@@ -16,7 +16,7 @@ ficha de D&D 2024 sem citar o herói no resultado, e sem inventar regra para imi
 ## Você diz
 
 ```
-/criar-personagem quero jogar o Homem-Aranha
+/criar-personagem quero jogar com o Homem-Aranha
 ```
 
 ## O agente responde
