@@ -92,6 +92,18 @@ Abra o projeto no seu agente e peça. Não precisa instalar nada.
 
 Seus personagens ficam em `fichas/`, sua campanha em `mesa/`.
 
+## Exemplos
+
+Conversas inteiras, com o que você pede e o que volta, em [`exemplos/`](exemplos/README.md):
+
+| Exemplo | A referência que entrou | O que ele mostra |
+|---|---|---|
+| [Teodoro Vasques, o Tecelão](exemplos/homem-aranha.md) | [Homem-Aranha](https://pt.wikipedia.org/wiki/Homem-Aranha) | Cada poder achado em `docs/` e citado; o que a regra não concede, dito na cara |
+| [Japeth, o bode da Garganta de Corvo](exemplos/bode-japeth.md) | [Japeth, de *Deu a Louca na Chapeuzinho*](https://pt.wikipedia.org/wiki/Deu_a_Louca_na_Chapeuzinho) | Bloco do apêndice B, e a adaptação marcada como adaptação |
+
+Referência de fora entra como comportamento e sai como personagem do mundo. O nome que veio do
+cinema ou do quadrinho não aparece na mesa, e nenhuma regra é inventada para imitar o original.
+
 ## Créditos
 
 Dungeons & Dragons e o Livro do Jogador pertencem à Wizards of the Coast. A tradução brasileira

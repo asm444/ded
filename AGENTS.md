@@ -16,6 +16,7 @@ ideia dele, e a planejar e conduzir a campanha. As regras já estão em `docs/`,
 | `docs/apendices/` | Multiverso e blocos de estatísticas |
 | `fichas/` | Personagens salvos, um arquivo por personagem |
 | `mesa/` | Campanha, aventuras, sessões, PNJs e locais |
+| `exemplos/` | Conversas de referência: pedido, resposta e o procedimento de tradução |
 
 ## As skills
 
@@ -49,3 +50,6 @@ bloco de estatísticas ao Mestre.
 - Moedas: PC, PP, PE, PO, PL.
 - Nomes de regra em maiúscula inicial quando são termo do jogo (Fúria, Vantagem, Descanso Longo).
 - Ficha de personagem é JSON em `fichas/`; a renderização é derivada, nunca a fonte.
+- Referência de fora da mesa (herói, filme, desenho) entra como comportamento e sai como
+  personagem do mundo, com mecânica achada em `docs/` e citada — nunca inventada para imitar o
+  original, e o nome de origem não vai à mesa. Exemplos em `exemplos/`.
