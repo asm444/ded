@@ -25,8 +25,8 @@ sabe o caminho, e só consegue se comunicar cantando
 
 > O que eu vou usar do pedido é o **comportamento**: bode de montanha, falante, e uma maldição
 > que o obriga a cantar tudo. O resto vem do mundo do jogo. Um traço de fala executável como
-> esse vale mais que um parágrafo de personalidade, porque funciona em cena que você não
-> previu.
+> esse vale mais que um parágrafo de personalidade, porque funciona também nas cenas que você
+> não previu.
 
 ### O PNJ
 
@@ -35,22 +35,22 @@ sabe o caminho, e só consegue se comunicar cantando
 > Bode de chifres lascados, pelo cinza sujo de poeira de mina, com uma sineta de latão amassada
 > no pescoço.
 >
-> **O que quer.** Voltar a falar. Foi um pastor da encosta que negou pousada a uma bruxa em
-> noite de nevasca; ela o deixou no corpo em que ele havia recusado abrigo, e amarrou a voz ao
-> canto. Ele leva qualquer um que suba a montanha, na esperança de que um deles saiba desfazer
-> maldição.
+> **O que quer.** Voltar a falar. Era pastor na encosta, e negou pousada a uma bruxa numa noite
+> de nevasca; ela o pôs no corpo do bode que dormia no curral que ele havia negado, e amarrou a
+> voz dele ao canto. Hoje guia qualquer um que suba a montanha, na esperança de encontrar
+> alguém que saiba desfazer a maldição.
 >
 > **Como fala.** Canta. Toda resposta é cantada, em ópera de taverna, com rima forçada quando
 > a rima não vem. **Desafina quando mente** — e é isso que o torna útil em mesa: os jogadores
 > aprendem a ouvir o desafino, e você tem um detector de mentira que não exige rolagem.
 >
-> **O que sabe.** A passagem por trás da cascata, que corta dois dias de viagem, e por que os
-> mineradores pararam de usá-la. Conta a passagem de graça; o motivo, só depois que alguém
-> cantar de volta para ele. Não é preço, é carência.
+> **O que sabe.** A passagem por trás da cascata, que corta dois dias de viagem, e o motivo de
+> os mineradores terem parado de usá-la. A passagem ele conta de graça; o motivo, só depois que
+> alguém cantar de volta para ele. Não é preço, é solidão.
 >
 > **Atitude inicial: Amigável** (`docs/regras/glossario.md`, p. 360–377). O grupo tem Vantagem
-> em testes para Influenciá-lo. Vira Indiferente se rirem dele; ninguém fica Amigável por
-> muito tempo sendo piada.
+> nos testes para Influenciá-lo. Vira Indiferente se rirem dele: ninguém continua Amigável
+> sendo tratado como piada.
 
 ### As estatísticas, e o que nelas é meu
 
@@ -68,26 +68,26 @@ sabe o caminho, e só consegue se comunicar cantando
 >
 > - O bloco lista **Idiomas —**. Japeth entende e canta em Comum porque foi humano; isso é
 >   decisão sua como Mestre, e não sai do apêndice.
-> - **Int 3** é de cabra. Se ele guarda a mente do pastor, suba para 10 (+0) e Car para 11
->   (+0) — o apêndice já autoriza o Mestre a alterar detalhes do bloco. Se você quiser que a
->   maldição tenha custado a mente junto com a voz, deixe o 3 e ele guia por instinto, não por
->   memória.
+> - **Int 3** é de cabra. Se ele guarda a mente do pastor, suba a Inteligência para 10 (+0) e o
+>   Carisma para 11 (+0) — o apêndice já autoriza o Mestre a alterar detalhes do bloco. Se você
+>   preferir que a maldição tenha custado a mente junto com a voz, deixe o 3: aí ele guia por
+>   instinto, e não por memória.
 > - A maldição em si não tem regra em `docs/`: aqui só há o Livro do Jogador, e remover
 >   maldição de humanoide transformado é assunto do Mestre. Se algum personagem tentar
->   desfazer, arbitre — não finja que existe uma linha que resolve.
+>   desfazê-la, arbitre — não finja que existe uma linha que resolve.
 
 ### Ganchos
 
 > - A bruxa continua na montanha, e sabe que alguém está subindo com o bode.
 > - Os mineradores fecharam a passagem por causa de algo, e Japeth viu o quê.
-> - Se o grupo o desencantar, você ganha um PNJ pastor que deve a vida a eles — e perde o bode
->   que a mesa passou a amar. Deixe a escolha ser deles.
+> - Se o grupo o desencantar, você ganha um pastor que deve a vida a eles — e perde o bode de
+>   que a mesa passou a gostar. Deixe a escolha na mão deles.
 >
-> Ele é recorrente? Se sim, gravo em `mesa/pnjs/japeth.md`. Se for só desta sessão, fica na
-> anotação da sessão e promovo depois, se o grupo se importar.
+> Ele vai voltar em outras sessões? Se sim, gravo em `mesa/pnjs/japeth.md`. Se for só desta
+> sessão, fica na anotação dela, e eu promovo depois, caso o grupo se importe.
 
 ### A nota de imersão
 
 > Nada na resposta acima cita o desenho. O bode que canta virou um pastor amaldiçoado numa
-> montanha com uma passagem escondida, e o gag de cantar virou **mecânica de mesa** pelo
-> desafino. É esse o teste: se você tirar a referência do pedido, o PNJ ainda fica de pé.
+> montanha com passagem escondida, e a piada de cantar virou **mecânica de mesa** pelo
+> desafino. O teste é esse: tire a referência do pedido, e o PNJ continua de pé.
