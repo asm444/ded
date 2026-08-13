@@ -6,7 +6,7 @@
 
 **D**ados · **É**tica · **D**efesa · **I**ntegridade · **D**ecisão
 
-Um paladino de mesa para D&D 2024, em português.
+Um auxílio de IA para jogar D&D 2024 em português.
 
 [English](README.en.md) · [Base de regras](docs/README.md) · [Guia para agentes](AGENTS.md)
 
@@ -16,27 +16,31 @@ Um paladino de mesa para D&D 2024, em português.
 
 ## O que é
 
-Um ambiente onde um agente de IA conduz você pelo D&D 2024: cria personagem, transforma uma
-ideia solta em ficha jogável, planeja campanha e conduz a mesa. As regras vêm do livro, com
-a página citada. Quando o agente não acha a regra, ele diz que não achou, em vez de inventar.
+Um agente de IA que senta na mesa com você. Do lado do jogador, ele cria personagem e ajuda a
+transformar uma ideia solta em ficha jogável. Do lado do Mestre, ele planeja campanha, prepara
+sessão e ajuda a conduzir o jogo.
 
-Feito com modelos gratuitos, via [opencode](https://opencode.ai). A ideia é essa: quem quer
-jogar D&D não deveria precisar pagar assinatura de IA nem decorar 397 páginas para começar.
+As regras já estão aqui, prontas, e ele responde citando a página. Quando não acha a regra, diz
+que não achou em vez de inventar.
 
-## O que dá para fazer
+Feito com modelos gratuitos, via [opencode](https://opencode.ai). Quem quer jogar D&D não
+deveria precisar de assinatura de IA nem decorar 397 páginas para começar.
+
+## Se você joga
 
 | Você quer | Diga | O que acontece |
 |---|---|---|
-| Um personagem novo | `/criar-personagem` | Os 5 passos oficiais, e no fim uma ficha que passa no validador |
+| Um personagem novo | `/criar-personagem` | Os 5 passos oficiais, do conceito à ficha fechada |
 | Uma ideia virar personagem | `/gerar-historia` | O passado sai ancorado no multiverso e vira escolha de perícia, talento e magia |
-| Saber uma regra | `/consultar-regra` | Resposta com a citação de onde ela está |
 | Planejar a evolução | `/planejar-build` | Nível a nível, com número onde dá para medir |
-| Mestrar | `/mestrar` | Encaminha para a altura certa: campanha, aventura, sessão ou mesa |
+| Subir de nível | `/subir-nivel` | Aplica o que entra e conduz só as escolhas novas |
+| Saber uma regra | `/consultar-regra` | A resposta, com a citação |
 
-## O circuito de Mestre
+## Se você mestra
 
-Planejar mesa erra quando se trabalha na escala errada: detalhar a taverna da sessão 1 antes
-de saber do que a campanha trata. O circuito existe para manter cada decisão na sua altura.
+Comece por `/mestrar`: ele descobre em que altura está seu trabalho e encaminha. Planejar mesa
+erra quando se trabalha na escala errada, detalhando a taverna da sessão 1 antes de saber do
+que a campanha trata.
 
 ```
    /planejar-campanha        premissa, tom, facções, onde termina
@@ -54,70 +58,41 @@ de saber do que a campanha trata. O circuito existe para manter cada decisão na
      /pos-sessao ─────────────────────┘        o que mudou realimenta o plano
 ```
 
-Componentes que qualquer altura chama: `/montar-encontro`, `/criar-pnj`, `/criar-local`,
-`/gerar-eventos`.
+Em qualquer ponto: `/montar-encontro`, `/criar-pnj`, `/criar-local`, `/gerar-eventos`.
 
 O circuito fecha de propósito. Planejamento que não recebe o resultado da mesa vira ficção
 paralela ao jogo real.
 
-## Como a base de regras é feita
+## A base de regras
 
-O livro é diagramado com uma fonte por papel semântico, então o extrator decide o que é
-título, tabela ou corpo pela **tipografia**, não por adivinhação sobre o texto:
-
-| Fonte no PDF | Papel |
-|---|---|
-| `WolpePegasus 64pt` | Nome de classe |
-| `MrsEavesOT-Roman 12pt` | Nome de magia |
-| `TTJenevers-BoldItalic 9pt` | Título embutido no parágrafo |
-| `ScalaSans-BoldLF 9pt` | Rótulo de célula de tabela |
-
-Isso torna a extração verificável por contagem. Se o sumário promete 48 subclasses e saem 47,
-o defeito se anuncia sozinho:
+Pronta em [`docs/`](docs/README.md), organizada por domínio:
 
 ```
-classes .......... 12    bate com o sumário
-subclasses ....... 48    4 por classe
-magias ........... 391   zero inversões alfabéticas
-condições ........ 15    uma ocorrência cada
-progressão ....... 20 níveis × 6 colunas, largura uniforme
+docs/regras/        fundamentos, ações, combate, dano e cura, condições, glossário
+docs/classes/       as 12 classes, com progressão 1–20 e 4 subclasses cada
+docs/especies/      10 espécies e 16 antecedentes
+docs/talentos/      origem, gerais, estilo de luta, dádiva épica
+docs/equipamento/   armas com Maestria, armaduras, ferramentas, itens
+docs/magias/        as 391 magias
+docs/apendices/     multiverso e blocos de estatísticas
 ```
 
-A ordem alfabética das magias é o oráculo mais útil de todos: qualquer inversão significa que
-o fluxo de leitura entre as duas colunas quebrou, e que texto pode ter caído sob o nome errado.
+São as mecânicas: valores, tabelas, características e descrições de efeito. A prosa literária e
+a arte do livro ficam de fora.
 
-## Começar
+## Como usar
 
-Você precisa do seu exemplar do Livro do Jogador (2024) em PDF, na raiz do projeto.
-
-```bash
-pip install --user pymupdf
-python3 tools/gerar_docs.py todos      # gera docs/ a partir do seu PDF
-```
-
-Depois é só pedir. Para conferir uma ficha a qualquer momento:
-
-```bash
-python3 tools/validar_ficha.py fichas/exemplo-thorin.json
-```
-
-O validador confere o que é decidível por cálculo: bônus de proficiência pelo nível, PV
-possível para o dado de vida e a Constituição, teto dos 27 pontos na compra de atributos.
-
-## O que tem aqui
+Abra o projeto no seu agente e peça. Não precisa instalar nada.
 
 ```
-tools/           extrair.py, gerar_docs.py, validar_ficha.py
-.claude/skills/  as 15 skills
-docs/            a base de regras (gerada do seu PDF, não versionada)
-fichas/          personagens em JSON
-mesa/            sua campanha (criada quando você começa a mestrar)
+/criar-personagem     quero um anão clérigo que perdeu a fé
+/mestrar              vou começar uma campanha
+/consultar-regra      agarrar provoca ataque de oportunidade?
 ```
 
-## Sobre o livro
+Seus personagens ficam em `fichas/`, sua campanha em `mesa/`.
 
-Este repositório não distribui o Livro do Jogador. O `docs/` é gerado do **seu** exemplar e
-fica fora do controle de versão. Dungeons & Dragons e o Livro do Jogador pertencem à Wizards
-of the Coast; a tradução brasileira usada é a da equipe Heróis Anônimos.
+## Créditos
 
-As ferramentas e as skills são livres para usar e modificar.
+Dungeons & Dragons e o Livro do Jogador pertencem à Wizards of the Coast. A tradução brasileira
+é da equipe Heróis Anônimos. As skills são livres para usar e modificar.

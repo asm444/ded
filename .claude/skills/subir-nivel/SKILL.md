@@ -19,9 +19,8 @@ nível novo abre.
    - Espaços de magia e magias conhecidas ou preparadas, se a classe conjura.
 4. Conduza o que é escolha: subclasse (nível 3), aumento de atributo ou talento, magias novas,
    opções de característica (manobras, invocações, metamagia, conforme a classe).
-5. Grave a ficha e valide, colando a saída:
-
-       python3 tools/validar_ficha.py fichas/<slug>.json
+5. Grave a ficha e confira os derivados: PV somados com o modificador de Constituição, e
+   bônus de proficiência acompanhando o nível.
 
 ## Cuidados
 
@@ -30,4 +29,4 @@ nível novo abre.
 - Personagem multiclasse soma níveis para bônus de proficiência e espaços de magia, mas as
   características vêm do nível **naquela** classe. Confira em `docs/personagem/multiclasse.md`.
 - Se o PV subir sem o modificador de Constituição, ou se o bônus de proficiência não
-  acompanhar o nível, a validação reprova — corrija antes de entregar.
+  acompanhar o nível, a ficha está errada. Corrija antes de entregar.

@@ -5,9 +5,9 @@ description: Cria um personagem de D&D 2024 completo, do conceito à ficha valid
 
 # Criar personagem
 
-Conduz os 5 passos do capítulo 2 e entrega uma ficha em `fichas/<nome>.json` que passa em
-`tools/validar_ficha.py`. Cada escolha oferecida vem de `docs/`, com o arquivo citado — nunca
-de memória, porque a versão 2024 mudou classe, origem e talento em relação à de 2014.
+Conduz os 5 passos do capítulo 2 e entrega uma ficha jogável em `fichas/<nome>.json`. Cada
+escolha oferecida vem de `docs/`, com o arquivo citado, nunca de memória: a versão 2024 mudou
+classe, origem e talento em relação à de 2014.
 
 ## Antes de começar
 
@@ -65,15 +65,14 @@ Traga as sugestões ao jogador como sugestões, aplique as aceitas e feche a fic
 
 Grave `fichas/<slug>.json` com: identidade, classe e nível, origem, atributos, PV, CA,
 proficiências, equipamento, magias (se houver) e a lista de características por nível com a
-página de origem. Rode a validação e cole a saída:
+página de origem.
 
-    python3 tools/validar_ficha.py fichas/<slug>.json
-
-Ficha que não passa não é entregue como pronta: mostre o que falhou e corrija.
+Antes de entregar, confira à mão o que é aritmético: bônus de proficiência pelo nível, PV
+possível para o dado de vida e a Constituição, e o teto de 27 pontos se usou compra.
 
 ## O que não fazer
 
 - Não invente característica, talento ou magia que você não localizou em `docs/`.
 - Não decida por atributo, classe ou conceito do jogador; ofereça e deixe escolher.
-- Não pule a validação porque "está óbvio" — pré-requisito de talento e espaço de magia por
-  multiclasse erram em silêncio.
+- Não pule a conferência porque "está óbvio": pré-requisito de talento e espaço de magia
+  por multiclasse erram em silêncio.

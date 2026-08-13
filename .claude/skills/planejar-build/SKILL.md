@@ -40,9 +40,7 @@ julgamento e recomende uma opção, sem fingir que a medida decidiu.
 ## Saída
 
 Uma tabela nível a nível com o que entra e o que foi escolhido, seguida das decisões abertas
-que o jogador precisa tomar. Se a build partir de uma ficha, valide o resultado no nível-alvo:
-
-    python3 tools/validar_ficha.py fichas/<slug>.json
+que o jogador precisa tomar.
 
 ## Armadilhas
 

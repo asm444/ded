@@ -6,7 +6,7 @@
 
 **D**ata · **E**thics · **D**efense · **I**ntegrity · **D**ecision
 
-A table paladin for D&D 2024, in Brazilian Portuguese.
+An AI companion for playing D&D 2024 in Brazilian Portuguese.
 
 [Português](README.md) · [Rules base](docs/README.md) · [Agent guide](AGENTS.md)
 
@@ -16,30 +16,33 @@ A table paladin for D&D 2024, in Brazilian Portuguese.
 
 ## What this is
 
-An environment where an AI agent walks you through D&D 2024: builds a character, turns a loose
-idea into a playable sheet, plans a campaign and runs the table. Rules come from the book, with
-the page cited. When the agent cannot find a rule, it says so instead of making one up.
+An AI agent that sits at the table with you. On the player side, it builds characters and turns
+a loose idea into a playable sheet. On the DM side, it plans the campaign, preps the session and
+helps run the game.
 
-Built with free models, through [opencode](https://opencode.ai). That is the point: playing
-D&D should not require an AI subscription or memorizing 397 pages first.
+The rules are already here, and it answers citing the page. When it cannot find a rule, it says
+so instead of making one up.
 
-The rules base and the skills are written in Portuguese, since that is the language of the
-book this was built for.
+Built with free models, through [opencode](https://opencode.ai). Playing D&D should not require
+an AI subscription or memorizing 397 pages first.
 
-## What you can do
+The rules base and the skills are in Portuguese, the language of the book this was built for.
+
+## If you play
 
 | You want | Say | What happens |
 |---|---|---|
-| A new character | `/criar-personagem` | The 5 official steps, ending in a sheet that passes the validator |
+| A new character | `/criar-personagem` | The 5 official steps, from concept to finished sheet |
 | An idea made playable | `/gerar-historia` | Backstory anchored in the multiverse, turned into skill, feat and spell choices |
-| A rule answered | `/consultar-regra` | The answer, with the citation |
 | A progression planned | `/planejar-build` | Level by level, with numbers where numbers apply |
-| To run the game | `/mestrar` | Routes you to the right altitude: campaign, adventure, session or table |
+| To level up | `/subir-nivel` | Applies what comes in, walks you through the new choices |
+| A rule answered | `/consultar-regra` | The answer, with the citation |
 
-## The Dungeon Master circuit
+## If you run the game
 
-Table prep goes wrong when you work at the wrong scale, detailing the session-1 tavern before
-knowing what the campaign is about. The circuit keeps each decision at its own altitude.
+Start with `/mestrar`: it works out which altitude your task belongs to and routes you. Table
+prep goes wrong when you work at the wrong scale, detailing the session-1 tavern before knowing
+what the campaign is about.
 
 ```
    /planejar-campanha        premise, tone, factions, how it ends
@@ -57,70 +60,41 @@ knowing what the campaign is about. The circuit keeps each decision at its own a
      /pos-sessao ─────────────────────┘        what changed feeds the plan back
 ```
 
-Components any altitude can call: `/montar-encontro`, `/criar-pnj`, `/criar-local`,
-`/gerar-eventos`.
+Available at any point: `/montar-encontro`, `/criar-pnj`, `/criar-local`, `/gerar-eventos`.
 
 The loop closes on purpose. Planning that never receives the table's outcome becomes fiction
 running parallel to the actual game.
 
-## How the rules base is built
+## The rules base
 
-The book is typeset with one font per semantic role, so the extractor decides what is a
-heading, a table or body text from **typography**, not from guessing at the text:
-
-| Font in the PDF | Role |
-|---|---|
-| `WolpePegasus 64pt` | Class name |
-| `MrsEavesOT-Roman 12pt` | Spell name |
-| `TTJenevers-BoldItalic 9pt` | Run-in heading inside a paragraph |
-| `ScalaSans-BoldLF 9pt` | Table cell label |
-
-That makes extraction verifiable by counting. If the table of contents promises 48 subclasses
-and 47 come out, the defect announces itself:
+Ready in [`docs/`](docs/README.md), organized by domain:
 
 ```
-classes .......... 12    matches the table of contents
-subclasses ....... 48    4 per class
-spells ........... 391   zero alphabetical inversions
-conditions ....... 15    one occurrence each
-progression ...... 20 levels × 6 columns, uniform width
+docs/regras/        fundamentals, actions, combat, damage and healing, conditions, glossary
+docs/classes/       all 12 classes, levels 1-20, 4 subclasses each
+docs/especies/      10 species and 16 backgrounds
+docs/talentos/      origin, general, fighting style, epic boon feats
+docs/equipamento/   weapons with Mastery, armor, tools, items
+docs/magias/        all 391 spells
+docs/apendices/     multiverse and stat blocks
 ```
 
-The alphabetical order of spells is the most useful oracle of all: any inversion means the
-reading flow between the two columns broke, and text may have landed under the wrong name.
+These are the mechanics: values, tables, features and effect descriptions. The book's prose and
+art are not included.
 
-## Getting started
+## Using it
 
-You need your own copy of the 2024 Player's Handbook as a PDF, in the project root.
-
-```bash
-pip install --user pymupdf
-python3 tools/gerar_docs.py todos      # builds docs/ from your PDF
-```
-
-Then just ask. To check a sheet at any point:
-
-```bash
-python3 tools/validar_ficha.py fichas/exemplo-thorin.json
-```
-
-The validator checks what is decidable by arithmetic: proficiency bonus against level, hit
-points possible for the hit die and Constitution, the 27-point ceiling on point buy.
-
-## Layout
+Open the project in your agent and ask. Nothing to install.
 
 ```
-tools/           extrair.py, gerar_docs.py, validar_ficha.py
-.claude/skills/  the 15 skills
-docs/            the rules base (generated from your PDF, not versioned)
-fichas/          characters as JSON
-mesa/            your campaign (created when you start running one)
+/criar-personagem     I want a dwarf cleric who lost their faith
+/mestrar              I'm starting a campaign
+/consultar-regra      does grappling provoke an opportunity attack?
 ```
 
-## About the book
+Your characters live in `fichas/`, your campaign in `mesa/`.
 
-This repository does not distribute the Player's Handbook. `docs/` is generated from **your**
-copy and stays out of version control. Dungeons & Dragons and the Player's Handbook belong to
-Wizards of the Coast; the Brazilian translation used here is by the Heróis Anônimos team.
+## Credits
 
-The tools and skills are free to use and modify.
+Dungeons & Dragons and the Player's Handbook belong to Wizards of the Coast. The Brazilian
+translation is by the Heróis Anônimos team. The skills are free to use and modify.
