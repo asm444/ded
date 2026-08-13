@@ -1,0 +1,19 @@
+# O PDF do livro nao vai para o repositorio: e' obra comercial da Wizards of the Coast.
+*.pdf
+
+# A base extraida tambem nao. Quem tem o livro gera a sua em segundos:
+#     python3 tools/gerar_docs.py todos
+# Para versionar a base mesmo assim, remova a linha abaixo e rode `git add docs/`.
+docs/
+!docs/README.md
+
+# Fichas de personagem sao suas; o exemplo fica versionado.
+fichas/*.json
+!fichas/exemplo-*.json
+
+# Material de mesa e' da sua campanha.
+/mesa/
+
+__pycache__/
+*.pyc
+.venv/

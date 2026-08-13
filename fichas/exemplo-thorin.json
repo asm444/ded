@@ -1,0 +1,14 @@
+{
+  "nome": "Thorin Pedra-Firme",
+  "classe": "Bárbaro",
+  "subclasse": "Trilha do Berserker",
+  "nivel": 5,
+  "especie": "Anão",
+  "antecedente": "Soldado",
+  "atributos_base": {"forca": 15, "destreza": 13, "constituicao": 14, "inteligencia": 8, "sabedoria": 12, "carisma": 10},
+  "atributos": {"forca": 17, "destreza": 13, "constituicao": 15, "inteligencia": 8, "sabedoria": 12, "carisma": 10},
+  "bonus_proficiencia": 3,
+  "pv_maximo": 47,
+  "ca": 15,
+  "magias": []
+}
