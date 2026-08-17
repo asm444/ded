@@ -16,8 +16,11 @@ as escolhas do grupo.
 2. **Tom.** Heroico, sombrio, intriga política, exploração, humor. O tom decide o que é
    apropriado em mesa mais do que qualquer regra.
 3. **Cenário.** Um dos quatro do livro (Forgotten Realms, Greyhawk, Dragonlance, Eberron), um
-   mundo próprio, ou um plano — Faéria e Sombral estão em `docs/apendices/multiverso.md`.
-   O projeto não tem ambientação detalhada: fixe só o necessário e diga que o resto é seu.
+   mundo próprio, um plano (Faéria e Sombral estão em `docs/apendices/multiverso.md`), ou um
+   mundo de fora já traduzido em `references/<slug>/`. O projeto não tem ambientação detalhada:
+   fixe só o necessário e diga que o resto é seu. Se o usuário citar um mundo de fora que ainda
+   não tem pasta em `references/`, pare aqui e chame `mundo`. Usando uma referência, grave no
+   arquivo a linha `Mundo: references/<slug>/`, que é como as outras skills sabem que ela existe.
 4. **Faixa de níveis e duração.** Do nível 1 ao 5 em dez sessões é uma campanha; do 1 ao 20 é
    outra coisa. Isso decide o ritmo de tudo.
 5. **Três facções ou forças** com o que cada uma quer. Elas geram conflito sem que você precise

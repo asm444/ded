@@ -36,6 +36,11 @@ para feras, montarias e invocações. **Não tem bestiário**: para monstros, pe
 estatísticas ao Mestre ou use o Livro dos Monstros. Nunca invente estatística de monstro e
 apresente como oficial; se improvisar um bloco, diga que é improvisado.
 
+Num mundo de fora (`mesa/campanha.md` com a linha `Mundo:`), a oposição sai das facções de
+`references/<slug>/mundo.md`, e o que ela usa sai de `traducao.md`, que já aponta a regra de
+cada arma e efeito daquele mundo. Encontro que ignora as facções vira monstro genérico com
+outro nome.
+
 ## Saída
 
 Entregue em formato de mesa: lista de criaturas com PV e CA, iniciativa, o mapa em três linhas,

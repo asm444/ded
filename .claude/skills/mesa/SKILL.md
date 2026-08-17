@@ -34,6 +34,9 @@ Mestre: diga que é decisão dele e ofereça uma opção padrão.
 
 SE o pedido for um encontro → chamar `montar-encontro`.
 SE for um PNJ → chamar `criar-pnj`.
+SE a campanha roda num mundo de fora e a cena puxar um elemento que `traducao.md` não cobre →
+resolva agora com a regra mais próxima, marque que arbitrou, e depois da sessão rode `mundo`
+no modo lacuna para gravar a linha. Em mesa, a decisão vem primeiro; o registro vem depois.
 SE a mesa estiver esperando e não houver tempo → resolva com o que sabe e diga que resolveu
 assim, sem abrir a skill.
 

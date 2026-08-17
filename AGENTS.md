@@ -16,7 +16,9 @@ ideia dele, e a planejar e conduzir a campanha. As regras já estão em `docs/`,
 | `docs/apendices/` | Multiverso e blocos de estatísticas |
 | `fichas/` | Personagens salvos, um arquivo por personagem |
 | `mesa/` | Campanha, aventuras, sessões, PNJs e locais |
+| `references/` | Mundos de fora já traduzidos, um por pasta, versionados e abertos a PR |
 | `exemplos/` | Conversas de referência: pedido, resposta e o procedimento de tradução |
+| `tools/` | `valida-referencia.sh`, que decide se uma referência de mundo pode virar PR |
 
 ## As skills
 
@@ -25,6 +27,9 @@ ideia dele, e a planejar e conduzir a campanha. As regras já estão em `docs/`,
 **Mestre:** `mestrar` roteia para a altura certa, e dela saem `planejar-campanha`,
 `planejar-aventura`, `planejar-sessao`, `mesa` e `pos-sessao`. Componentes que qualquer uma
 chama: `montar-encontro`, `criar-pnj`, `criar-local`, `gerar-eventos`.
+
+**Mundo de fora:** `mundo` pesquisa a identidade de um mundo (série, jogo, filme, livro) e a
+traduz em `references/<slug>/`. É a altura acima da campanha, e roda uma vez por mundo.
 
 **Sempre disponível:** `consultar-regra`.
 
@@ -53,3 +58,7 @@ bloco de estatísticas ao Mestre.
 - Referência de fora da mesa (herói, filme, desenho) entra como comportamento e sai como
   personagem do mundo, com mecânica achada em `docs/` e citada — nunca inventada para imitar o
   original, e o nome de origem não vai à mesa. Exemplos em `exemplos/`.
+- A mesma regra na escala do mundo inteiro é a skill `mundo`, e o que ela grava em
+  `references/<slug>/` passa por `tools/valida-referencia.sh` antes de valer. Lá o nome da
+  franquia fica confinado à seção `## Origem e fontes`, e mecânica sem citação de `docs/`
+  reprova por comando, não por opinião.

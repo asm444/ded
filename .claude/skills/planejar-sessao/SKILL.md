@@ -26,6 +26,18 @@ grupo decidiu fazer, e com as consequências que já estavam em curso.
 5. **A pergunta em aberto.** O que a sessão precisa deixar respondido, e o que precisa deixar
    em aberto para a próxima.
 
+## Se a campanha roda num mundo de fora
+
+`mesa/campanha.md` traz a linha `Mundo:` quando a mesa usa uma referência de `references/`.
+Havendo uma, leia as duas partes antes de preparar: `mundo.md` dá a estética das cenas, as
+facções que agem sozinhas e os ganchos; `traducao.md` diz qual regra sustenta cada coisa dali.
+
+Se a sessão precisa de um elemento que o mundo ainda não traduziu (o veículo que o grupo vai
+roubar, a arma que o vilão carrega, o povo da cidade que eles vão visitar), chame `mundo` no
+modo lacuna. Ele resolve só aquele item e grava a linha nova em `traducao.md`. Improvisar a
+mecânica na hora é o que faz a referência apodrecer: na sessão seguinte ninguém lembra qual
+regra foi usada, e o mundo passa a contradizer a si mesmo.
+
 ## O que não preparar
 
 Falas prontas, mapas de lugares que talvez não visitem, o resultado de uma negociação. Se você

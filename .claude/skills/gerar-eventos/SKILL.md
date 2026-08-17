@@ -39,6 +39,7 @@ Se as duas falharem, descarte e gere outro.
 | Riscos e ambiente (`docs/regras/glossario.md`) | Tempestade, queda, fogo, sede, fome — com dano e CD definidos |
 | Viagem (`docs/regras/exploracao.md`) | Encontros e obstáculos de estrada |
 | Animais do apêndice B | Feras que se comportam como feras, não como monstros |
+| Mundo de fora (`references/<slug>/mundo.md`) | As facções de lá agindo, e os perigos do ambiente daquele mundo |
 
 ## Tipos
 

@@ -45,6 +45,9 @@ prep goes wrong when you work at the wrong scale, detailing the session-1 tavern
 what the campaign is about.
 
 ```
+   /mundo                    only if the table runs in an outside world
+            │
+            ▼
    /planejar-campanha        premise, tone, factions, how it ends
             │
             ▼
@@ -64,6 +67,44 @@ Available at any point: `/montar-encontro`, `/criar-pnj`, `/criar-local`, `/gera
 
 The loop closes on purpose. Planning that never receives the table's outcome becomes fiction
 running parallel to the actual game.
+
+## If you want to play in a world you love
+
+`/mundo` researches the identity of a world from outside D&D and hands it back playable. It
+interviews you first, since you picked that world for a reason no wiki records, and only then
+goes after the sources.
+
+```
+/mundo    I want to play in something like Fallout
+/mundo    the whole table is into Ben 10
+```
+
+You get two files in `references/<slug>/`: the world's **identity** (its founding event, what
+takes the place of magic there, the factions, what does not exist in it) and the **translation**,
+naming which rule in `docs/` backs each people, archetype, item and power.
+
+No number is invented. An energy weapon is a weapon the book already has, renamed and
+redescribed, and whatever the rules cannot do is written down under what has no equivalent.
+A script checks that before you trust the file:
+
+```
+tools/valida-referencia.sh references/<slug>
+```
+
+While a gap remains, the skill researches again, aimed only at that gap, and asks you when the
+sources fall short. It closes when nothing is left open.
+
+One is already in the repository, so you can see the format before running your own:
+[**A Confraria dos Vis**](references/meu-malvado-favorito/mundo.md), derived from *Despicable
+Me*. The shrink ray there is the Enlarge/Reduce spell with a grip and a barrel, the basement
+crowd are Halflings (their Lucky trait is what explains them walking away from everything), and
+"stealing the moon" sits in the list of what has **no** equivalent instead of becoming a new rule.
+
+### Send your world here
+
+Once it validates, it can be a PR, so nobody researches the same world twice. The five
+acceptance criteria live in [`references/README.md`](references/README.md), and the skill
+offers the PR itself when it finishes.
 
 ## The rules base
 

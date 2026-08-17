@@ -38,6 +38,13 @@ Sem isso o local vira texto. Use o que já está definido em `docs/regras/`:
 - **Região**: o que se atravessa, quanto tempo leva (`docs/regras/exploracao.md` traz viagem) e
   o que se encontra no caminho.
 
+## Num mundo de fora
+
+Se `mesa/campanha.md` traz a linha `Mundo:`, a primeira impressão sai das cinco imagens de
+`references/<slug>/mundo.md`, e os perigos do lugar saem dos perigos do ambiente listados lá.
+Cada um deles já tem regra apontada em `traducao.md`, então o lugar nasce jogável em vez de
+descritivo.
+
 ## Saída
 
 Local recorrente vai para `mesa/locais/<slug>.md`, em formato de consulta — você vai ler isso

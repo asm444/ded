@@ -43,6 +43,9 @@ erra quando se trabalha na escala errada, detalhando a taverna da sessão 1 ante
 que a campanha trata.
 
 ```
+   /mundo                    só se a mesa roda num mundo de fora
+            │
+            ▼
    /planejar-campanha        premissa, tom, facções, onde termina
             │
             ▼
@@ -62,6 +65,45 @@ Em qualquer ponto: `/montar-encontro`, `/criar-pnj`, `/criar-local`, `/gerar-eve
 
 O circuito fecha de propósito. Planejamento que não recebe o resultado da mesa vira ficção
 paralela ao jogo real.
+
+## Se você quer jogar num mundo que você gosta
+
+`/mundo` pesquisa a identidade de um mundo de fora do D&D e devolve ele jogável. Ele entrevista
+você primeiro, porque você escolheu esse mundo por uma razão que nenhuma wiki registra, e só
+depois vai atrás das fontes.
+
+```
+/mundo    quero jogar num mundo tipo Fallout
+/mundo    a mesa toda gosta de Ben 10
+```
+
+O que volta são dois arquivos em `references/<slug>/`: a **identidade** do mundo (o evento que
+o fundou, o que ali ocupa o lugar da magia, as facções, o que não existe lá) e a **tradução**,
+que diz qual regra de `docs/` sustenta cada povo, cada arquétipo, cada item e cada poder.
+
+Nenhum número é inventado. Uma arma de energia é uma arma que já existe no livro, com outro
+nome e outra descrição, e o que a regra não faz vem escrito na seção do que não tem equivalente.
+Um script confere isso antes de você confiar no arquivo:
+
+```
+tools/valida-referencia.sh references/<slug>
+```
+
+Enquanto sobrar lacuna, a skill pesquisa de novo, focada só naquele buraco, e pergunta a você
+quando a fonte não resolve. Ela fecha quando não sobra nenhuma.
+
+Tem um pronto no repositório para você ver o formato antes de rodar o seu:
+[**A Confraria dos Vis**](references/meu-malvado-favorito/mundo.md), tirado de *Meu Malvado
+Favorito*. Nele o aparelho que encolhe é a magia Aumentar/Reduzir com manopla e cano, os miúdos
+do porão são Pequeninos (o traço Sorte é o que explica eles saírem inteiros de tudo), e "roubar
+a lua" está na lista do que **não** tem equivalente, em vez de ter virado regra nova.
+
+### Mande o seu mundo para cá
+
+Passou na validação, cabe um PR. A ideia é que ninguém precise pesquisar o mesmo mundo duas
+vezes: quem já mapeou Ben 10 poupa a próxima mesa que quiser jogar lá. Os cinco critérios de
+aceite estão em [`references/README.md`](references/README.md), e a própria skill oferece o PR
+quando termina.
 
 ## A base de regras
 

@@ -40,6 +40,10 @@ mundo se ele vencer. Vilão sem razão própria vira alvo, e alvo não sustenta 
 Ligue o PNJ a algo que já existe: uma facção da campanha, um gancho de `gerar-historia` de
 algum personagem, um lugar de `criar-local`. PNJ solto é PNJ esquecido.
 
+Se `mesa/campanha.md` traz a linha `Mundo:`, o nome, o jeito de falar e o que esse PNJ quer
+saem de `references/<slug>/mundo.md`, das facções e da estética de lá. Um taverneiro genérico
+num mundo com identidade forte denuncia na primeira fala que o mundo é só verniz.
+
 ## Saída
 
 PNJ recorrente vai para `mesa/pnjs/<slug>.md`. PNJ descartável fica na sessão. Se ele

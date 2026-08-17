@@ -10,10 +10,11 @@ planejamento de mesa é trabalhar na escala errada: detalhar a taverna da sessã
 ainda não se sabe do que a campanha trata, ou querer decidir o clímax do nível 15 antes da
 primeira sessão.
 
-## As cinco alturas
+## As seis alturas
 
 | Altura | Skill | Pergunta que ela responde | Quando |
 |---|---|---|---|
+| Mundo | `mundo` | Em que mundo isso se passa, e como ele vira regra? | Só quando a mesa usa um mundo de fora |
 | Campanha | `planejar-campanha` | Do que essa história trata, e onde termina? | Uma vez, no começo |
 | Aventura | `planejar-aventura` | Qual é o problema deste arco e como ele se resolve? | A cada 3–6 sessões |
 | Sessão | `planejar-sessao` | O que acontece no próximo encontro do grupo? | Antes de cada sessão |
@@ -27,6 +28,10 @@ Componentes chamados por qualquer altura: `criar-pnj`, `criar-local`, `montar-en
 Pergunte só o que não dá para inferir: existe campanha em andamento? Quando é a próxima
 sessão? Qual o nível do grupo?
 
+- O usuário nomeou um mundo de fora do D&D (série, jogo, filme, livro) e não existe
+  `references/<slug>/` para ele → `mundo` primeiro. Se a pasta existe, leia e siga para a
+  altura seguinte. Campanha montada antes do mundo fixado retrabalha inteira quando o mundo
+  contradiz o que já foi decidido.
 - Sem campanha definida → `planejar-campanha`. Não pule: sem premissa e tom, toda sessão vira
   improviso desconexo.
 - Campanha existe, arco atual terminou ou não existe → `planejar-aventura`.
@@ -40,6 +45,9 @@ sessão 4 sem saber para onde a aventura vai produz trabalho que será jogado fo
 ## O circuito
 
 ```
+mundo  (só se a mesa usa um mundo de fora)
+        │
+        ▼
 planejar-campanha
         │
         ▼
@@ -62,6 +70,7 @@ campanha. Planejamento que não recebe o resultado da mesa vira ficção paralel
 
 ## Onde os artefatos moram
 
+    references/<slug>/         o mundo de fora, se houver, versionado e compartilhável
     mesa/campanha.md           premissa, tom, facções, arco
     mesa/aventuras/<slug>.md   um arquivo por arco
     mesa/sessoes/<n>.md        preparo e, depois, o que aconteceu
