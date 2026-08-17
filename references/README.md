@@ -20,14 +20,17 @@ tem equivalente em vez de virar regra.
 ## O que tem dentro de cada pasta
 
     references/<slug>/
-    ├── mundo.md      identidade: premissa, evento fundador, tom, a lei do mundo,
-    │                 geografia, facções, povos, economia, perigos, estética,
-    │                 o que não existe, faixa de níveis, ganchos e fontes
-    └── traducao.md   o mapa mecânico: povo→espécie, arquétipo→classe,
-                      item→equipamento, efeito→magia — cada linha citando docs/
+    ├── mundo.md       identidade: premissa, evento fundador, linha do tempo, tom,
+    │                  a lei do mundo, geografia, povos, economia, perigos, estética,
+    │                  o que não existe, faixa de níveis, facções, ganchos e fontes
+    ├── traducao.md    o mapa mecânico: povo→espécie, arquétipo→classe, subclasse,
+    │                  habilidade→perícia e talento, item→equipamento, efeito→magia,
+    │                  cada linha citando docs/
+    └── entrevista.md  as perguntas feitas ao dono da mesa e as respostas dele
 
 `mundo.md` é o que você lê antes de jogar. `traducao.md` é o que você consulta com o grupo
-esperando.
+esperando. `entrevista.md` é o que prova que as linhas marcadas `[fonte: você]` vieram mesmo de
+alguém, e não do agente: sem ele, essa marca reprova.
 
 ## Como contribuir com um mundo
 
@@ -44,9 +47,12 @@ Um mundo por PR.
    muda nome e descrição, nunca número.
 2. **Nenhuma lacuna aberta.** Os treze critérios de `mundo.md` preenchidos, ou marcados
    `NÃO SE APLICA — <motivo>`. Sem "a definir".
-3. **Fonte no texto.** Toda afirmação sobre o mundo marcada com `[fonte: <URL>]`,
-   `[fonte: você]` ou `[não verificado]`. Mínimo de três fontes com URL. Em `traducao.md`,
-   `[não verificado]` reprova: mecânica sem fonte não vai à mesa.
+3. **Fonte no texto, e cada marca no seu lugar.** `[fonte: <URL>]` é o que a fonte diz,
+   `[fonte: você]` é resposta literal registrada em `entrevista.md`, `[derivado: entrevista]` é
+   conclusão tirada dela, e `[não verificado]` é o que ninguém confirmou. Mínimo de três fontes
+   com URL. Em `traducao.md`, `[não verificado]` reprova: mecânica sem fonte não vai à mesa.
+   Atribuir ao dono da mesa uma frase que ele não disse é o pior defeito possível aqui, porque
+   transforma palpite em prova — por isso o R9 exige a entrevista no disco.
 4. **Derivação, não reprodução.** Nada de texto copiado da obra, nada de arte, nada de tabela
    transcrita. O arquivo é um mapa de tradução com referência bibliográfica, e a obra original
    continua sendo de quem é.

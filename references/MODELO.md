@@ -6,14 +6,19 @@ slug: <pasta-em-kebab-case>
 
 # <nome derivado>
 
-Marque cada afirmação: `[fonte: <URL>]`, `[fonte: você]` ou `[não verificado]`.
-Critério que não se aplica fecha com `NÃO SE APLICA — <motivo>`. Nada fica em branco.
+Marque cada afirmação: `[fonte: <URL>]`, `[fonte: você]`, `[derivado: entrevista]` ou
+`[não verificado]`. Usar `[fonte: você]` obriga a existir um `entrevista.md` ao lado, com a
+resposta que sustenta a linha. Critério que não se aplica fecha com `NÃO SE APLICA — <motivo>`.
+Nada fica em branco.
 
 ## Premissa
 <uma frase: do que esse mundo trata>
 
 ## Evento fundador
 <o antes e o depois desse mundo>
+
+## Linha do tempo
+<três marcos: como era antes, o que rompeu, como está agora>
 
 ## Tom e limites
 <heroico, sombrio, humor; e o que não entra na mesa>

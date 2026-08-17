@@ -29,6 +29,9 @@ Sobreviventes de um abrigo saem ao deserto envenenado atrás de água limpa.
 ## Evento fundador
 As bombas caíram duzentos anos atrás e o céu ficou amarelo.
 
+## Linha do tempo
+Antes havia cidade, depois veio o fogo, e agora sobrou o deserto e quem o atravessa.
+
 ## Tom e limites
 Sombrio com humor seco. Sem violência contra crianças.
 
@@ -161,6 +164,10 @@ quebra "R6 fontes de menos"             R6 'grep -v "exemplo.org/c" mundo.md > t
 quebra "R7 lacuna aberta"               R7 'printf "\n- Moedas: A DEFINIR\n" >> traducao.md'
 quebra "R7 não se aplica sem motivo"    R7 'printf "\n- Náutica: NÃO SE APLICA\n" >> mundo.md'
 quebra "R8 mecânica não verificada"     R8 'printf "\n- A armadura de energia protege [não verificado].\n" >> traducao.md'
+quebra "R9 fonte 'você' sem entrevista" R9 'printf "\nO povo detesta chuva. [fonte: você]\n" >> mundo.md'
+quebra "R9 entrevista sem resposta"     R9 'printf "\nO povo detesta chuva. [fonte: você]\n" >> mundo.md && printf -- "---\n# Entrevista\n**P:** e ai?\n" > entrevista.md'
+aceita "R9 entrevista com resposta passa" \
+  'printf "\nO povo detesta chuva. [fonte: você]\n" >> mundo.md && printf -- "---\n# Entrevista\n**P:** chove ai?\n**R:** o tempo todo.\n" > entrevista.md'
 
 [ "$falhou" -eq 0 ] && { echo; echo "todos os casos passaram"; exit 0; }
 echo; echo "há caso falhando"; exit 1

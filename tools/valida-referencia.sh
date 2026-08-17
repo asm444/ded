@@ -8,6 +8,7 @@ set -uo pipefail
 SECOES=(
   "## Premissa"
   "## Evento fundador"
+  "## Linha do tempo"
   "## Tom e limites"
   "## A lei do mundo"
   "## Escala e geografia"
@@ -119,6 +120,16 @@ for f in "$mundo" "$trad"; do
     erro "$f:$n" "R7 'NÃO SE APLICA' sem motivo após —: ${resto:0:60}"
   done < <(grep -n -F 'NÃO SE APLICA' "$f")
 done
+
+# R9 - '[fonte: você]' e '[derivado: entrevista]' exigem a entrevista no disco
+entrev="$dir/entrevista.md"
+if grep -q -E '\[fonte: você\]|\[derivado: entrevista\]' "$mundo"; then
+  if [ ! -f "$entrev" ]; then
+    erro "$mundo:0" "R9 cita o usuário como fonte sem $dir/entrevista.md"
+  elif [ "$(grep -c '^\*\*R:\*\*' "$entrev")" -lt 1 ]; then
+    erro "$entrev:0" "R9 entrevista sem nenhuma resposta ('**R:**')"
+  fi
+fi
 
 # R8 - afirmacao de mecanica nunca fica sem verificacao
 while IFS=: read -r n resto; do
